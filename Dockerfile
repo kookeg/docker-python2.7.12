@@ -1,5 +1,5 @@
 FROM centos 
-MAINTAINER yunmai<service@yunmai365.com>
+MAINTAINER kookeg<thinklang0917@gmail.com>
 
 WORKDIR /data/python
 ENV LANG en_US.UTF-8
@@ -31,7 +31,7 @@ RUN rm -f /usr/bin/pip
 RUN ln -s /usr/local/python2.7.12/bin/pip /usr/bin/pip
 RUN pip install virtualenv
 RUN ln -s /usr/local/python2.7.12/bin/virtualenv /usr/bin/virtualenv
-RUN echo "yunmai365" | passwd --stdin root
+RUN echo "kookeg" | passwd --stdin root
 RUN sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 RUN mkdir -p /var/run/sshd
